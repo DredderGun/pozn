@@ -1,0 +1,1 @@
+{"version":3,"file":"\/home\/aleksandr\/projects\/pozn-adaptive\/resources\/public\/cljs\/pozn_adaptive\/statistic\/subs.js","sources":["subs.cljs"],"lineCount":9,"mappings":";AAAA;;;AAGA,gCAAA,hCAACA,+JAEC,WAAKC,GAAGC;AAAR,AACE,OAAA,6FAAYD","names":["re-frame.core\/reg-sub","db","_"]}

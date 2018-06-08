@@ -1,0 +1,301 @@
+; :sale-receipts чеки сохранённые на клиенте
+; :id - уникальный идентификатор чека
+; :guests хэшмапа гостей ключ - id гостя, значение - мапа характеристик гостя
+;  -- :id уникальный идентификатор гостя
+;  -- :dishes вектор хэшмэп блюд
+; :table - стол чека. Вектор: [номер зоны, номер стола]
+; :paid? - оплачен ли чек?
+; :sent? - отправлен ли чек?
+; :dates - дата создания чека (ключ :origin), печати чека (ключ :send) и оплаты (ключ :paid)
+; :sum_price - сумма оплаты чека
+; :payment - сумма оплаты чека наличными и картой. Формат хэшмэпа. :cash - наличными, :card - картой
+{:sale-receipts {1 {:id 1
+                    :guests {1 {:id 1
+                                 :dishes [{:id 1
+                                           :guest-id 1
+                                           :menu-item-id 3834
+                                           :name "Бифштекс"
+                                           :price 150
+                                           :selected? false
+                                           :count 2}
+                                          {:id 2
+                                           :guest-id 1
+                                           :menu-item-id 3816
+                                           :name " Блины (3шт) "
+                                           :price 45
+                                           :selected? false
+                                           :modificators {:w_oil false
+                                                          :w_salt false
+                                                          :warm true
+                                                          :w_onion true
+                                                          :w_garnish false}
+                                           :count 1}]}
+                               2 {:id 2
+                                     :dishes
+                                         [{:id 1
+                                           :guest-id 2
+                                           :menu-item-id 5487
+                                           :name "Американо"
+                                           :price 70
+                                           :selected? false
+                                           :modificators {:w_oil false
+                                                          :w_salt false
+                                                          :warm true
+                                                          :w_onion false
+                                                          :w_garnish false}
+                                           :count 1}]}}
+                     :table [1 4]
+                     :paid? false
+                     :sent? false
+                     :dates {:origin #object[Object 20180425T110001]}
+                     :sum_price 415
+                     :payment {:cash 415 :card 0}}
+                    2
+                    {:id 2
+                     :guests
+                     {1
+                      {:id 1
+                       :dishes
+                           [{:id 1
+                             :guest-id 1
+                             :menu-item-id 3748
+                             :name " Долька лимона "
+                             :price 5
+                             :selected? false
+                             :count 1}
+                            {:id 2
+                             :guest-id 1
+                             :menu-item-id 7237
+                             :name " Виски Fat boy 50мл. "
+                             :price 130
+                             :selected? false
+                             :count 1}]}
+                      2
+                      {:id 2
+                       :dishes
+                           [{:id 1
+                             :guest-id 2
+                             :menu-item-id 3754
+                             :name " Кофе 3 в 1"
+                             :price 20
+                             :selected? false
+                             :count 1}]}
+                      3
+                      {:id 3
+                       :dishes
+                           [{:id 1
+                             :guest-id 3
+                             :menu-item-id 3834
+                             :name "Бифштекс"
+                             :price 150
+                             :selected? false
+                             :count 1}]}}
+                     :table [0 0]
+                     :paid? true
+                     :sent? false
+                     :dates
+                     {:origin #object[Object 20180425T110051]
+                      :pay #object[Object 20180425T110151]}
+                     :sum_price 305
+                     :payment {:cash 250 :card 55}}
+                    3
+                    {:id 3
+                     :guests
+                     {1
+                      {:id 1
+                       :dishes
+                           [{:id 1
+                             :guest-id 1
+                             :menu-item-id 3791
+                             :name "Бефстроганов"
+                             :price 110
+                             :selected? false
+                             :count 1}]}
+                      2
+                      {:id 2
+                       :dishes
+                           [{:id 1
+                             :guest-id 2
+                             :menu-item-id 3792
+                             :name " Борщ "
+                             :price 98
+                             :selected? false
+                             :count 2}]}}
+                     :table [2 3]
+                     :paid? false
+                     :sent? true
+                     :dates
+                     {:origin #object[Object 20180425T110157]
+                      :send #object[Object 20180425T110219]}
+                     :sum_price 306
+                     :payment {:cash 306 :card 0}}
+                    4
+                    {:id 4
+                     :guests
+                     {1
+                      {:id 1
+                       :dishes
+                           [{:id 1
+                             :guest-id 1
+                             :menu-item-id 3791
+                             :name "Бефстроганов"
+                             :price 110
+                             :selected? false
+                             :count 1}]}
+                      2
+                      {:id 2
+                       :dishes
+                           [{:id 1
+                             :guest-id 2
+                             :menu-item-id 7241
+                             :name "Вино бокалом белое п/сладкое 150мл"
+                             :price 80
+                             :selected? false
+                             :count 2}]}}
+                     :table [4 2]
+                     :paid? true
+                     :sent? false
+                     :dates
+                     {:origin #object[Object 20180425T110751]
+                      :pay #object[Object 20180425T110819]}
+                     :sum_price 270
+                     :payment {:cash 20 :card 250}}}
+ ; :menu-items все продукты из меню
+ :menu-items [{:description
+                               "Америка́но или  «кофе по-американски» —зерновой коферазбавленный горячей водой."
+               :tags ""
+               :ings ""
+               :group "Напитки"
+               :c_time ""
+               :short_name "Американо"
+               :weight "120мл"
+               :uid 5487
+               :id 5487
+               :fractional "Нет"
+               :serving_order3 "3"
+               :serving_order4 "4"
+               :full_name " Американо "
+               :price 70}
+              {:description
+                               "Тёртый сыр с чесноком завернутый в обжаренный во фритюре тонкий пласт баклажана"
+               :tags ""
+               :ings
+                               "баклажан сыр чеснок майонез. Украшение: помидор лист салата."
+               :group "Салаты"
+               :c_time "10"
+               :short_name "Баклажаны с сыром"
+               :weight "90/30"
+               :uid 3802
+               :id 3802
+               :fractional "Нет"
+               :serving_order3 "1"
+               :serving_order4 "1"
+               :full_name " Баклажаны с сыром и чесноком"
+               :price 74}
+              {:description "-"
+               :tags ""
+               :ings ""
+               :group ""
+               :c_time ""
+               :short_name "Кит Кат 58гр"
+               :weight "58"
+               :uid 3742
+               :id 3742
+               :fractional "Нет"
+               :serving_order3 "3"
+               :serving_order4 "4"
+               :full_name " Батончик Кит Кат 58гр "
+               :price 0}
+              {:description "Обжаренная говяжья печень с луком в сливочном соусе"
+               :tags ""
+               :ings
+                            "печень говяжья сливки лук соль перец. Украшение: помидор огурец лист салата."
+               :group "Горячее"
+               :c_time "20"
+               :short_name "Бефстроганов"
+               :weight "180/30"
+               :uid 3791
+               :id 3791
+               :fractional "Нет"
+               :serving_order3 "3"
+               :serving_order4 "3"
+               :full_name " Бефстроганов из печени"
+               :price 110}
+              {:description "Запечённая котлета из рубленной говядины с яичницей."
+               :tags ""
+               :ings
+                            "Говядинасалолуксольперецяйцоукроп. Украшение: помидор огурец лист салатаукроп."
+               :group "Горячее"
+               :c_time "20"
+               :short_name "Бифштекс"
+               :weight "140/40/30"
+               :uid 3834
+               :id 3834
+               :fractional "Нет"
+               :serving_order3 "3"
+               :serving_order4 "3"
+               :full_name " Бифштекс с яйцом "
+               :price 150}
+              {:description
+                               "Два блина фаршированные говяжьим фаршем в томатном соусе"
+               :tags ""
+               :ings
+                               "Блины: яйцо мука молоко вода соль сахар сода. Начинка: говяжий фарш лук томатный соус соль перец"
+               :group "Хиты"
+               :c_time "20"
+               :short_name "Блинчики Болоньезе"
+               :weight "180"
+               :uid 3817
+               :id 3817
+               :fractional "Нет"
+               :serving_order3 "2"
+               :serving_order4 "2"
+               :full_name " Блинчики Болоньезе "
+               :price 95}]
+ ; описание столов и зон
+ :table-areas [{:id 1 :label "Зона 1" :tables [1 2 3 4 5 6 7 8 9 10 11 12 13]}
+               {:id 2 :label "Зона 2" :tables [1 2 3 4 5]}
+               {:id 3 :label "Зона 3" :tables [1 2 3 4 5 6 7]}
+               {:id 4 :label "Зона 4" :tables [1 2]}]
+
+
+ ; текущее отображение столов
+ :tables-view 0
+ ; тут собирается статистика по всем чекам
+ ; :sold-dishes-count количество проданных блюд
+ ; :common-sum общая сумма
+ ; :card-sum оплачено картой
+ ; :cash-sum оплачено наличными
+ ; :paid-receipt-count количество оплаченных чеков
+ ; :unpaid-receipt-count количество неоплаченных чеков
+ :statistic {:sold-dishes-count nil
+            :common-sum nil
+            :card-sum nil
+            :cash-sum nil
+            :paid-receipt-count nil
+            :unpaid-receipt-count nil}
+ ; какой экран активирован?
+ :layout :sale-receipts-layout
+ :old-dish? false
+ :modificators-names {:w_oil "Без масла"
+                      :w_salt "Без соли"
+                      :warm "Теплое"
+                      :w_onion "Без лука"
+                      :w_garnish "Без гарнира"}
+ :select-mod false
+ :active-receipt 4
+ :swipe-events {:swiped-to-end? false :current-x 0}
+ :modal-windows {:more-menu false :info-window false}
+ :dish-search-query ""
+ :error {:msg nil}
+ :active-menu-item 7241
+ :active-dish-in-receipt 1
+ :active-guest 2
+ :active-table [4 2]
+ ; список модификаторов блюд
+ :modificators-to-new-receipt {:w_oil false
+                               :w_salt false
+                               :warm false
+                               :w_onion false
+                               :w_garnish false}}
+
