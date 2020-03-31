@@ -14,6 +14,7 @@ The app hold information about orders in an restaurant. Each order is one of a f
 * a order done by a phone
 
 The tables menu have different view modes: list, map etc
+
 ![alt text](doc_images/tables.png "Tables list")
 ![alt text](doc_images/tables2.png "Tables list")
 
