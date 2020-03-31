@@ -1,6 +1,33 @@
-# pozn-adaptive
+# Waiter interface
 
-A waiter interface for a convenient user experience with just a smartphone
+A waiter interface for phone browsers
+
+### Using technologies
+
+[Figwheel](https://github.com/bhauman/lein-figwheel), [Reagent](https://github.com/reagent-project/reagent), [Re-frame](https://github.com/day8/re-frame), [Garden](https://github.com/noprompt/garden) etc.
+
+### How does it look?
+
+The app hold information about orders in an restaurant. Each order is one of a few types: 
+* a to-go order
+* at the table order 
+* a order done by a phone
+
+The tables menu have different view modes: list, map etc
+![alt text](doc_images/tables.png "Tables list")
+![alt text](doc_images/tables2.png "Tables list")
+
+Waiter can charge each guest separately. Each sum can be payed by a credit card or by cash, but the application can also calculate the sum one part by cash and another part by a card
+
+![alt text](doc_images/order.jpg "Order view") 
+![alt text](doc_images/charge.png "Order view")
+
+Dishes can be moved from one order to another order or to a new one. Each item of the order can contain a description
+
+![alt text](doc_images/menu.png "Menu view")
+![alt text](doc_images/menu2.png "Menu view")
+
+And many other functions...
 
 ## Development Mode
 

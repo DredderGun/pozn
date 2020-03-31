@@ -7,7 +7,10 @@
   <name>pozn-adaptive</name>
   <description/>
   <scm>
-    <tag>4a4fa1d8009debc2c471d9e475051610eb51ffd5</tag>
+    <url>https://github.com/DredderGun/pozn</url>
+    <connection>scm:git:git://github.com/DredderGun/pozn.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/DredderGun/pozn.git</developerConnection>
+    <tag>af50a850c7a6e19ce0693ca0211f398e8b467298</tag>
   </scm>
   <build>
     <sourceDirectory>src/clj</sourceDirectory>
@@ -65,7 +68,7 @@
     <dependency>
       <groupId>reagent</groupId>
       <artifactId>reagent</artifactId>
-      <version>0.7.0</version>
+      <version>0.10.0</version>
     </dependency>
     <dependency>
       <groupId>re-frame</groupId>
@@ -127,6 +130,11 @@
       <artifactId>devtools</artifactId>
       <version>0.9.4</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>day8.re-frame</groupId>
+      <artifactId>test</artifactId>
+      <version>0.1.5</version>
     </dependency>
     <dependency>
       <groupId>day8.re-frame</groupId>
